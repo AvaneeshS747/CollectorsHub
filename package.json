@@ -1,0 +1,20 @@
+{
+"name": "collectors-hub",
+"version": "1.0.0",
+"description": "A social media platform for collectors.",
+"main": "server/server.js",
+"scripts": {
+"install-client": "cd client && npm install",
+"install-server": "cd server && npm install",
+"postinstall": "npm run install-client && npm run install-server",
+"client": "npm start --prefix client",
+"server": "nodemon server/server.js",
+"dev": "concurrently \"npm run server\" \"npm run client\""
+},
+"author": "",
+"license": "ISC",
+"devDependencies": {
+"concurrently": "^8.2.2",
+"nodemon": "^3.1.0"
+}
+}
