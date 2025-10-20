@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/layout/Navbar.jsx';
 import Footer from '../components/layout/Footer.jsx';
-import PostCard from '../components/posts/PostCard.jsx';
+import PostCard from '../components/post/PostCard.jsx';
 import Spinner from '../components/common/Spinner.jsx';
 
 // Mock data to simulate fetching posts from an API

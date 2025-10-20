@@ -8,6 +8,8 @@ const connectDB = require('./config/database');
 const authRoutes = require('./routes/authRoutes');
 const postRoutes = require('./routes/postRoutes');
 const userRoutes = require('./routes/userRoutes');
+const communityRoutes = require('./routes/communityRoutes');
+const messageRoutes = require('./routes/messageRoutes');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -25,6 +27,8 @@ app.use(express.json()); // To parse JSON bodies
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/communities', communityRoutes);
+app.use('/api/messages', messageRoutes);
 
 // --- Deployment Configuration ---
 // The following code will run only in production
@@ -44,7 +48,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Define the port the server will run on
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 // Start the server
 app.listen(PORT, () => {

@@ -44,10 +44,10 @@ const PostCard = ({ post }) => {
       {/* Card Actions: Like, Comment */}
       <div className="px-4 pt-3 pb-2">
         <div className="flex items-center space-x-4">
-          <button className="flex items-center space-x-1 text-gray-600 hover:text-red-500 focus:outline-none">
+          <button className="flex items-center space-x-1 text-gray-600 hover:text-red-500 focus:outline-none transition-colors">
             {/* Like Icon */}
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.5l1.318-1.182a4.5 4.5 0 116.364 6.364L12 21.5l-7.682-7.682a4.5 4.5 0 010-6.364z" />
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
             <span className="font-semibold text-sm">{likes}</span>
           </button>

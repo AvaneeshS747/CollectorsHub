@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import InputField from '../components/common/InputField.jsx';
 import Button from '../components/common/Button.jsx';
-import logo from '../assets/images/logo.svg';
 
 // TODO: Replace 'a' tags with '<Link>' from react-router-dom once routing is set up.
 
@@ -30,7 +29,7 @@ const LoginPage = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
         <div className="flex justify-center">
-          <img src={logo} alt="CollectorsHub Logo" className="h-16 w-16" />
+          <div className="h-16 w-16 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-3xl">C</div>
         </div>
         <h2 className="text-2xl font-bold text-center text-gray-800">
           Welcome Back

@@ -1,8 +1,7 @@
 import React from 'react';
 // import { Link } from 'react-router-dom'; // Note: We will use <Link> instead of <a> once routing is set up.
 import PropTypes from 'prop-types';
-import logo from '../assets/images/logo.svg';
-import Button from './common/Button';
+import Button from '../common/Button';
 
 /**
  * The main navigation bar for the application.
@@ -11,7 +10,8 @@ import Button from './common/Button';
  */
 const Navbar = () => {
   // This is a placeholder for authentication logic. In a real app, this would come from a context or state manager.
-  const isAuthenticated = false;
+  // Temporarily set to true to show all features
+  const isAuthenticated = true;
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-40">
@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             {/* TODO: Replace <a> with <Link to="/"> from react-router-dom */}
             <a href="/" className="flex items-center space-x-2">
-              <img className="h-8 w-auto" src={logo} alt="CollectorsHub Logo" />
+              <div className="h-8 w-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">C</div>
               <span className="hidden sm:block font-bold text-xl text-gray-800">CollectorsHub</span>
             </a>
           </div>
@@ -50,11 +50,15 @@ const Navbar = () => {
               {isAuthenticated ? (
                 <>
                   {/* This section will be displayed for logged-in users */}
-                  {/* TODO: Replace <a> with <Link> from react-router-dom */}
-                  <a href="/create" title="Create Post" className="p-1 rounded-full text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <a href="/" className="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+                  <a href="/explore" className="text-gray-700 hover:text-indigo-600 font-medium">Explore</a>
+                  <a href="/communities" className="text-gray-700 hover:text-indigo-600 font-medium">Communities</a>
+                  <a href="/chat" className="text-gray-700 hover:text-indigo-600 font-medium">Chat</a>
+                  <a href="/create-post" title="Create Post" className="flex items-center space-x-1 px-3 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
                     </svg>
+                    <span className="font-medium">Create</span>
                   </a>
                   <a href="/profile" className="text-gray-700 hover:text-indigo-600 font-medium">Profile</a>
                 </>

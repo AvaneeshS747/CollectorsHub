@@ -9,6 +9,8 @@ import ProfilePage from './pages/ProfilePage.jsx';
 import ExplorePage from './pages/ExplorePage.jsx';
 import CreatePostPage from './pages/CreatePostPage.jsx';
 import SettingsPage from './pages/SettingsPage.jsx';
+import ChatPage from './pages/ChatPage.jsx';
+import CommunitiesPage from './pages/CommunitiesPage.jsx';
 
 // Import Global Context Provider
 import { AuthProvider } from './context/AuthContext.js';
@@ -34,6 +36,8 @@ function App() {
             {/* Protected Routes */}
             <Route path="/create-post" element={<CreatePostPage />} />
             <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/chat" element={<ChatPage />} />
+            <Route path="/communities" element={<CommunitiesPage />} />
 
             {/* Fallback Route */}
             <Route
